@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Exemplo01</string>
+    <string name="app_name">Exemplo 01</string>
+    <string name="login">E-Mail do Usuário</string>
+    <string name="login_form_password">Senha</string>
+    <string name="form_login_submit">Enviar</string>
 </resources>
