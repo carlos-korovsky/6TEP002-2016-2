@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExemploMVC</string>
+    <string name="main_activity_bt_finish">Finalizar compra</string>
+</resources>
