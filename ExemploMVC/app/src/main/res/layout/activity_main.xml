@@ -13,7 +13,7 @@
     <TableRow
         android:id="@+id/row"
         android:layout_width="match_parent"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:orientation="horizontal"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lvTarefa">
@@ -23,14 +23,16 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="18sp" >
+            android:textSize="18sp"
+            android:inputType="text"
+            android:hint="@string/main_txtarefa_hint">
         </EditText>
 
         <Button
             android:id="@+id/btNovaTarefa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Adicionar" >
+            android:text="@string/main_add_new_task" >
         </Button>
     </TableRow>
 

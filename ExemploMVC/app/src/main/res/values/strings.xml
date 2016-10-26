@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ExemploMVC</string>
     <string name="main_activity_bt_finish">Finalizar compra</string>
+    <string name="main_add_new_task">Adicionar</string>
+    <string name="main_txtarefa_hint">Adicione uma nova tarefa</string>
 </resources>
