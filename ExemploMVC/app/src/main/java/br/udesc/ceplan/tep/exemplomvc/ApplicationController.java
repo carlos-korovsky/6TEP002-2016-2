@@ -3,6 +3,7 @@ package br.udesc.ceplan.tep.exemplomvc;
 import android.app.Application;
 
 import br.udesc.ceplan.tep.exemplomvc.dao.DaoFactory;
+import br.udesc.ceplan.tep.exemplomvc.dao.sqlite.DaoFactorySQLite;
 
 /**
  * Created by UKTech on 25/10/2016.
@@ -10,13 +11,12 @@ import br.udesc.ceplan.tep.exemplomvc.dao.DaoFactory;
 
 public class ApplicationController extends Application {
 
-    private final DaoFactory daoFactory;
+    private DaoFactory daoFactorySQLite;
 
-    public ApplicationController() {
-        this.daoFactory = DaoFactory.getFactory(this);
-    }
-
-    public DaoFactory getDaoFactory() {
-        return daoFactory;
+    public synchronized DaoFactory getDaoFactorySQLite() {
+        if (this.daoFactorySQLite == null) {
+            this.daoFactorySQLite = new DaoFactorySQLite(this);
+        }
+        return this.daoFactorySQLite;
     }
 }

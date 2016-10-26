@@ -14,11 +14,11 @@ import br.udesc.ceplan.tep.exemplomvc.model.Tarefa;
 /**
  * Created by UKTech on 25/10/2016.
  */
-public class TarefasDaoSQLite implements TarefaDao {
+public class TarefaDaoSQLite implements TarefaDao {
 
     private final SQLiteOpenHelper database;
 
-    public TarefasDaoSQLite(SQLiteOpenHelper database) {
+    public TarefaDaoSQLite(SQLiteOpenHelper database) {
         this.database = database;
     }
 
@@ -70,10 +70,10 @@ public class TarefasDaoSQLite implements TarefaDao {
     }
 
     @Override
-    public boolean delete(Long _id) {
+    public boolean delete(Long id) {
         SQLiteDatabase db = this.database.getWritableDatabase();
         try {
-            String[] whereArgs = new String[]{ _id.toString() };
+            String[] whereArgs = new String[]{ id.toString() };
             int count = db.delete("tarefa", "_id=?", whereArgs);
             return  (count > 0);
         } catch (Exception e) {
@@ -84,10 +84,10 @@ public class TarefasDaoSQLite implements TarefaDao {
     }
 
     @Override
-    public Tarefa findOneById(Long _id) {
+    public Tarefa findOneById(Long id) {
         SQLiteDatabase db = this.database.getWritableDatabase();
         try {
-            String[] selectArgs = new String[] { _id.toString() } ;
+            String[] selectArgs = new String[] { id.toString() } ;
             Cursor c;
             c = db.query(true, "tarefa", null, "_id=?", selectArgs, null, null, null, "1");
             Tarefa product = toList(c).get(0);

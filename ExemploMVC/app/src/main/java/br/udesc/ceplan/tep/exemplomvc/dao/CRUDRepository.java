@@ -7,13 +7,13 @@ import java.util.List;
  * Created by UKTech on 25/10/2016.
  */
 
-public interface CRUDRepository<T, ID extends Serializable> {
+public interface CRUDRepository<E, K extends Serializable> {
 
-    public T create(T entity);
-    public T update(T entity);
-    public T delete(T entity);
-    public boolean delete(ID id);
-    public T findOneById(ID id);
-    public List<T> findAll();
+    public E create(E entity);
+    public E update(E entity);
+    public E delete(E entity);
+    public boolean delete(K id);
+    public E findOneById(K id);
+    public List<E> findAll();
 
 }

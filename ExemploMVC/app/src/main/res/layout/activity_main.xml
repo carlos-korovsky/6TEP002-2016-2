@@ -10,14 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.udesc.ceplan.tep.exemplomvc.MainActivity">
 
-
     <TableRow
         android:id="@+id/row"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lvTarefa"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lvTarefa">
 
         <EditText
             android:id="@+id/etNovaTarefa"
@@ -39,7 +38,8 @@
         android:id="@+id/lvTarefa"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
     </ListView>
+
 </RelativeLayout>

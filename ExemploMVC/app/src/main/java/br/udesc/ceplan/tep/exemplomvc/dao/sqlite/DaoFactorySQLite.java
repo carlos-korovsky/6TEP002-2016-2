@@ -9,18 +9,18 @@ import br.udesc.ceplan.tep.exemplomvc.dao.TarefaDao;
 /**
  * Created by UKTech on 25/10/2016.
  */
-public class DaoFactorySQLite extends DaoFactory {
+public class DaoFactorySQLite implements DaoFactory {
 
-    private final SQLiteOpenHelper database;
+    private final SQLiteOpenHelper sqliteDatabase;
 
 
     public DaoFactorySQLite(Context context) {
-        this.database = new SQLiteExemploDatabase(context);
+        this.sqliteDatabase = new SQLiteExemploDatabase(context);
     }
 
 
     @Override
     public TarefaDao getTarefaDao() {
-        return new TarefasDaoSQLite(database);
+        return new TarefaDaoSQLite(this.sqliteDatabase);
     }
 }
