@@ -1,5 +1,6 @@
 package br.udesc.ceplan.tep.exemplomvc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -61,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View view) {
                 Log.d(MainActivity.APP_TAG, "botão nova tarefa acionado");
+                String txAtividade = MainActivity.this.etNovaTarefa.getText().toString();
+                Tarefa tarefa = new Tarefa();
+                tarefa.setName(txAtividade);
+                tarefa.setDescription("Descrição: " + txAtividade);
+                MainActivity.this.aController.getDaoFactorySQLite().getTarefaDao().create(tarefa);
+                MainActivity.this.etNovaTarefa.setText("");
                 MainActivity.this.populaTarefas();
             }
         };
@@ -76,9 +83,12 @@ public class MainActivity extends AppCompatActivity {
             {
 
                 Log.d(MainActivity.APP_TAG, String.format("tarefa id: %d e posição: %d", id, position));
-
-                final TextView v = (TextView) view;
-
+                Tarefa tarefa = (Tarefa) MainActivity.this.lvTarefa.getAdapter().getItem(position);
+                Intent intent = new Intent(MainActivity.this, TarefaDetailActivity.class);
+                intent.putExtra(TarefaDetailActivity.TAREFA_ID, tarefa.getId());
+                intent.putExtra(TarefaDetailActivity.TAREFA_NAME, tarefa.getName());
+                intent.putExtra(TarefaDetailActivity.TAREFA_DESC, tarefa.getDescription());
+                startActivity(intent);
                 MainActivity.this.populaTarefas();
             }
         };

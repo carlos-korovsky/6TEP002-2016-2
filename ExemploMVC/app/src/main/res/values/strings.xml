@@ -3,4 +3,6 @@
     <string name="main_activity_bt_finish">Finalizar compra</string>
     <string name="main_add_new_task">Adicionar</string>
     <string name="main_txtarefa_hint">Adicione uma nova tarefa</string>
+    <string name="title_activity_tarefa_detail">TarefaDetailActivity</string>
+    <string name="tarefa_detail_btDelete">Deletar</string>
 </resources>
