@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "561537538545",
+    "project_id": "teste-g-signin"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561537538545:android:54c9e03853300cef",
+        "android_client_info": {
+          "package_name": "br.com.uktech.googleauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561537538545-8lekegf3j24qv49u3g1qtut1o0o1cd8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.uktech.googleauth",
+            "certificate_hash": "f8e94f68510f856ccb802ec0cc98ae21b509c3e8"
+          }
+        },
+        {
+          "client_id": "561537538545-j1ugisrqdukfu5ln04k74n8316t5fugj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbVYPQ9UBcAc99fpCAxKNrIIKT7wG1kOo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
